@@ -1,0 +1,13 @@
+user
+    username:string [unique, present]
+    password:string [6-16 chars, present]
+    has_many posts
+    has_many comments
+posts
+    link:string
+    has_many comments
+    belongs_to user
+comments
+    body:text
+    belongs_to post
+    belongs_to user
